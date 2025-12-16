@@ -32,6 +32,7 @@
       color: var(--texto);
     }
 
+    /* HEADER */
     header {
       position: sticky;
       top: 0;
@@ -47,7 +48,14 @@
     header h1 {
       font-size: 1.4rem;
       font-weight: 900;
-      color: #fff;
+    }
+
+    header h1 .branco {
+      color: #ffffff;
+    }
+
+    header h1 .amarelo {
+      color: var(--amarelo);
     }
 
     nav a {
@@ -61,6 +69,7 @@
       color: var(--amarelo);
     }
 
+    /* HERO */
     .hero {
       min-height: 90vh;
       display: flex;
@@ -96,6 +105,7 @@
       flex-wrap: wrap;
     }
 
+    /* BOTÕES */
     .btn {
       padding: 14px 30px;
       border-radius: 999px;
@@ -117,6 +127,7 @@
       box-shadow: 0 10px 30px rgba(250,204,21,.45);
     }
 
+    /* SEÇÕES */
     section {
       padding: 80px 20px;
       max-width: 1200px;
@@ -145,13 +156,14 @@
     .card h3 {
       margin-bottom: 12px;
       font-size: 1.3rem;
-      color: #fff;
+      color: #ffffff;
     }
 
     .card p {
       color: #cbd5f5;
     }
 
+    /* CTA */
     .cta {
       background: linear-gradient(135deg, var(--amarelo-escuro), var(--amarelo));
       border-radius: 32px;
@@ -182,7 +194,10 @@
 <body>
 
   <header>
-    <h1>Dnj Diesel</h1>
+    <h1>
+      <span class="branco">Dnj</span>
+      <span class="amarelo">Diesel</span>
+    </h1>
     <nav>
       <a href="#">Início</a>
       <a href="#servicos">Serviços</a>
@@ -192,12 +207,21 @@
 
   <section class="hero">
     <div>
-      <h2>Seu caminhão não pode parar.<br><span>Socorro diesel onde você estiver</span></h2>
-      <p>A Dnj Diesel Oficina Móvel atende em qualquer lugar, levando mecânica diesel profissional até você.</p>
+      <h2>Seu caminhão não pode parar.<br>
+        <span>Socorro diesel onde você estiver</span>
+      </h2>
+      <p>
+        A Dnj Diesel Oficina Móvel atende <strong>em qualquer lugar</strong>,
+        levando mecânica diesel profissional até você.
+      </p>
 
       <div class="actions">
-        <a href="https://wa.me/5547992340674" target="_blank" class="btn">Chamar no WhatsApp</a>
-        <a href="#servicos" class="btn secondary">Nossos serviços</a>
+        <a href="https://wa.me/5547992340674" target="_blank" class="btn">
+          Chamar no WhatsApp
+        </a>
+        <a href="#servicos" class="btn secondary">
+          Nossos serviços
+        </a>
       </div>
     </div>
   </section>
@@ -216,9 +240,11 @@
   </section>
 
   <section class="cta">
-    <h2>Precisa de ajuda agora?</h2>
+    <h2>Precisa de socorro agora?</h2>
     <p>Chame no WhatsApp e resolvemos no local.</p>
-    <a href="https://wa.me/5547992340674" target="_blank" class="btn">Falar agora</a>
+    <a href="https://wa.me/5547992340674" target="_blank" class="btn">
+      Falar agora
+    </a>
   </section>
 
   <footer>

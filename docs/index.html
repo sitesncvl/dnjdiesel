@@ -5,10 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dnj Diesel Oficina Móvel</title>
 
-  <!-- Fonte -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -32,13 +31,12 @@
       color: var(--texto);
     }
 
-    /* HEADER */
     header {
       position: sticky;
       top: 0;
       z-index: 10;
-      background: rgba(2,6,23,.75);
-      backdrop-filter: blur(12px);
+      background: rgba(2,6,23,.85);
+      backdrop-filter: blur(10px);
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -50,13 +48,8 @@
       font-weight: 900;
     }
 
-    header h1 .branco {
-      color: #ffffff;
-    }
-
-    header h1 .amarelo {
-      color: var(--amarelo);
-    }
+    .branco { color: #fff; }
+    .amarelo { color: var(--amarelo); }
 
     nav a {
       margin-left: 24px;
@@ -65,11 +58,25 @@
       font-weight: 500;
     }
 
-    nav a:hover {
-      color: var(--amarelo);
+    nav a:hover { color: var(--amarelo); }
+
+    .social {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
     }
 
-    /* HERO */
+    .social svg {
+      width: 26px;
+      height: 26px;
+      fill: var(--amarelo);
+      transition: transform .2s;
+    }
+
+    .social a:hover svg {
+      transform: scale(1.1);
+    }
+
     .hero {
       min-height: 90vh;
       display: flex;
@@ -82,13 +89,10 @@
     .hero h2 {
       font-size: clamp(2.5rem, 6vw, 4rem);
       font-weight: 900;
-      line-height: 1.1;
       margin-bottom: 20px;
     }
 
-    .hero span {
-      color: var(--amarelo);
-    }
+    .hero span { color: var(--amarelo); }
 
     .hero p {
       max-width: 600px;
@@ -105,7 +109,6 @@
       flex-wrap: wrap;
     }
 
-    /* BOTÕES */
     .btn {
       padding: 14px 30px;
       border-radius: 999px;
@@ -113,7 +116,6 @@
       color: #fff;
       text-decoration: none;
       font-weight: 800;
-      transition: transform .2s, box-shadow .2s;
     }
 
     .btn.secondary {
@@ -122,12 +124,6 @@
       color: var(--texto);
     }
 
-    .btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 10px 30px rgba(250,204,21,.45);
-    }
-
-    /* SEÇÕES */
     section {
       padding: 80px 20px;
       max-width: 1200px;
@@ -142,28 +138,11 @@
 
     .card {
       background: #020617;
-      border: 1px solid var(--borda);
+      color: #fff;
       border-radius: 20px;
       padding: 32px;
-      transition: transform .2s, border .2s;
     }
 
-    .card:hover {
-      transform: translateY(-6px);
-      border-color: var(--amarelo);
-    }
-
-    .card h3 {
-      margin-bottom: 12px;
-      font-size: 1.3rem;
-      color: #ffffff;
-    }
-
-    .card p {
-      color: #cbd5f5;
-    }
-
-    /* CTA */
     .cta {
       background: linear-gradient(135deg, var(--amarelo-escuro), var(--amarelo));
       border-radius: 32px;
@@ -176,86 +155,75 @@
     footer {
       padding: 40px 20px;
       text-align: center;
-      color: #64748b;
       border-top: 1px solid var(--borda);
     }
 
     @media (max-width: 768px) {
       header {
-        padding: 16px 20px;
+        flex-direction: column;
+        gap: 12px;
       }
-      nav {
-        display: none;
-      }
+
+      nav { display: none; }
     }
   </style>
 </head>
 
 <body>
 
-  <header>
-    <h1>
-      <span class="branco">Dnj</span>
-      <span class="amarelo">Diesel</span>
-    </h1>
-    <nav>
-      <a href="#">Início</a>
-      <a href="#servicos">Serviços</a>
-      <a href="https://wa.me/5547992320674" target="_blank">Contato</a>
-    </nav>
-  </header>
+<header>
+  <h1><span class="branco">Dnj</span> <span class="amarelo">Diesel</span></h1>
 
-  <section class="hero">
-    <div>
-      <h2>Seu caminhão não pode parar.<br>
-        <span>Socorro diesel onde você estiver</span>
-      </h2>
-      <p>
-        A Dnj Diesel Oficina Móvel atende <strong>em qualquer lugar</strong>,
-        levando mecânica diesel profissional até você.
-      </p>
+  <nav>
+    <a href="#">Início</a>
+    <a href="#servicos">Serviços</a>
+    <a href="https://wa.me/5547992320674" target="_blank">Contato</a>
+  </nav>
 
-      <div class="actions">
-        <a href="https://wa.me/5547992320674" target="_blank" class="btn">
-          Chamar no WhatsApp
-        </a>
-        <a href="#servicos" class="btn secondary">
-          Nossos serviços
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <section id="servicos">
-    <div class="grid">
-      <div class="card"><h3>Revisão Preventiva</h3><p>Evite paradas inesperadas.</p></div>
-      <div class="card"><h3>Revisão Corretiva</h3><p>Correção rápida de falhas.</p></div>
-      <div class="card"><h3>Troca de Óleo</h3><p>Lubrificação correta do motor.</p></div>
-      <div class="card"><h3>Freios</h3><p>Segurança total.</p></div>
-      <div class="card"><h3>Suspensão</h3><p>Mais estabilidade.</p></div>
-      <div class="card"><h3>Socorro Mecânico</h3><p>Atendimento emergencial.</p></div>
-      <div class="card"><h3>Graxa</h3><p>Lubrificação em geral.</p></div>
-      <div class="card"><h3>Reparos</h3><p>Mecânica diesel completa.</p></div>
-    </div>
-  </section>
-
-  <section class="cta">
-    <h2>Precisa de socorro agora?</h2>
-    <p>Chame no WhatsApp e resolvemos no local.</p>
-    <a href="https://wa.me/5547992320674" target="_blank" class="btn">
-      Falar agora
+  <div class="social">
+    <a href="https://www.instagram.com/dnjdiesel.oficinamovel/" target="_blank">
+      <svg viewBox="0 0 24 24"><path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7z"/></svg>
     </a>
-  </section>
+    <a href="https://www.facebook.com/dnj.diesel/" target="_blank">
+      <svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.5 9.9v-7h-2v-3h2v-2.3c0-2 1.2-3.1 3-3.1h1.8v2h-1c-1 0-1.3.6-1.3 1.2V12h2.6l-.4 3h-2.2v7A10 10 0 0 0 22 12z"/></svg>
+    </a>
+    <a href="mailto:dnjdiesel.oficinamovel@gmail.com">
+      <svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z"/></svg>
+    </a>
+  </div>
+</header>
 
-  <footer>
-    <p style="font-size:1.4rem;font-weight:900;color:var(--amarelo);margin-bottom:12px;">
-      DNJ DIESEL OFICINA MÓVEL
-    </p>
-    <p><strong>Atendimento:</strong> Qualquer lugar (oficina móvel)</p>
-    <p><strong>WhatsApp:</strong> (47) 99232-0674</p>
-    <p style="margin-top:16px;">© 2025 • DNJ Diesel Oficina Móvel</p>
-  </footer>
+<section class="hero">
+  <div>
+    <h2>Seu caminhão não pode parar.<br><span>Socorro diesel onde você estiver</span></h2>
+    <p>Atendimento em qualquer lugar com mecânica diesel profissional.</p>
+    <div class="actions">
+      <a href="https://wa.me/5547992320674" target="_blank" class="btn">Chamar no WhatsApp</a>
+      <a href="#servicos" class="btn secondary">Nossos serviços</a>
+    </div>
+  </div>
+</section>
+
+<section id="servicos">
+  <div class="grid">
+    <div class="card">Revisão Preventiva</div>
+    <div class="card">Revisão Corretiva</div>
+    <div class="card">Troca de Óleo</div>
+    <div class="card">Freios</div>
+    <div class="card">Suspensão</div>
+    <div class="card">Socorro Mecânico</div>
+    <div class="card">Graxa e Lubrificação</div>
+    <div class="card">Reparos em Geral</div>
+  </div>
+</section>
+
+<footer>
+  <p style="font-weight:900;color:var(--amarelo);font-size:1.3rem;">
+    DNJ DIESEL OFICINA MÓVEL
+  </p>
+  <p>WhatsApp: (47) 99232-0674</p>
+  <p>© 2025 • Todos os direitos reservados</p>
+</footer>
 
 </body>
 </html>
-

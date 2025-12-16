@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modelo Comercial Vermelho</title>
+
+  <!-- Fonte -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --vermelho: #ef4444;
+      --vermelho-escuro: #b91c1c;
+      --fundo: #020617;
+      --texto: #e5e7eb;
+      --texto-suave: #94a3b8;
+      --borda: #1e293b;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: var(--fundo);
+      color: var(--texto);
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(2,6,23,.75);
+      backdrop-filter: blur(12px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+    }
+
+    header h1 {
+      font-size: 1.4rem;
+      font-weight: 900;
+    }
+
+    nav a {
+      margin-left: 24px;
+      color: #cbd5f5;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover { color: var(--vermelho); }
+
+    .hero {
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .hero h2 {
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      font-weight: 900;
+      margin-bottom: 20px;
+    }
+
+    .hero span { color: var(--vermelho); }
+
+    .hero p {
+      max-width: 600px;
+      margin: auto;
+      color: var(--texto-suave);
+      font-size: 1.1rem;
+    }
+
+    .actions {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 14px 30px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--vermelho-escuro), var(--vermelho));
+      color: #fff;
+      text-decoration: none;
+      font-weight: 800;
+      transition: transform .2s, box-shadow .2s;
+    }
+
+    .btn.secondary {
+      background: transparent;
+      border: 1px solid var(--borda);
+      color: var(--texto);
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(239,68,68,.45);
+    }
+
+    section {
+      padding: 80px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: #020617;
+      border: 1px solid var(--borda);
+      border-radius: 20px;
+      padding: 32px;
+      transition: transform .2s, border .2s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      border-color: var(--vermelho);
+    }
+
+    .card h3 {
+      margin-bottom: 12px;
+      font-size: 1.3rem;
+    }
+
+    .card p { color: var(--texto-suave); }
+
+    .cta {
+      background: linear-gradient(135deg, var(--vermelho-escuro), var(--vermelho));
+      border-radius: 32px;
+      padding: 80px 20px;
+      text-align: center;
+      color: #fff;
+      margin: 60px 20px;
+    }
+
+    footer {
+      padding: 40px 20px;
+      text-align: center;
+      color: #64748b;
+      border-top: 1px solid var(--borda);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>SuaMarca</h1>
+    <nav>
+      <a href="#">Início</a>
+      <a href="#">Serviços</a>
+      <a href="#">Sobre</a>
+      <a href="#">Contato</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div>
+      <h2>Transforme visitantes em <span>clientes</span></h2>
+      <p>Layout comercial em vermelho, feito pra conversão e impacto.</p>
+      <div class="actions">
+        <a href="#" class="btn">Começar agora</a>
+        <a href="#" class="btn secondary">Saiba mais</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="grid">
+      <div class="card">
+        <h3>Venda Mais</h3>
+        <p>Design pensado pra gerar cliques e conversões.</p>
+      </div>
+      <div class="card">
+        <h3>Visual Profissional</h3>
+        <p>Interface moderna e confiável.</p>
+      </div>
+      <div class="card">
+        <h3>Responsivo</h3>
+        <p>Funciona perfeito em qualquer tela.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2>Pronto pra fechar negócio?</h2>
+    <p>Um site comercial direto ao ponto.</p>
+    <a href="#" class="btn">Entrar em contato</a>
+  </section>
+
+  <footer>
+    © 2025 • SuaMarca
+  </footer>
+
+</body>
+</html>
